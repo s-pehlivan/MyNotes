@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5NY-3N-3AW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pocket Notes-->
+        <scene sceneID="oiA-di-cTJ">
+            <objects>
+                <viewController id="lhj-Ls-PtR" customClass="MainPageViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="20T-k3-715">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WlL-09-uMw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <color key="tintColor" red="0.19607841970000001" green="0.2235293984" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aDX-q0-jB7">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="notePaper" id="2M5-hv-uJk" customClass="NotePageCollectionViewCell" customModule="MyNotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aSN-49-SvE">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Btd-3u-Xph">
+                                                    <rect key="frame" x="10" y="10" width="108" height="108"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aym-wR-2fI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="108" height="70"/>
+                                                            <color key="tintColor" name="TitleTint"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" name="TitleTint"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsx-t7-VFd">
+                                                            <rect key="frame" x="0.0" y="78" width="108" height="30"/>
+                                                            <color key="tintColor" name="TitleTint"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" name="TitleTint"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="jsx-t7-VFd" firstAttribute="leading" secondItem="Btd-3u-Xph" secondAttribute="leading" id="3EF-ap-Rlo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="jsx-t7-VFd" secondAttribute="trailing" id="Sql-21-NWQ"/>
+                                                        <constraint firstItem="aym-wR-2fI" firstAttribute="width" secondItem="Btd-3u-Xph" secondAttribute="width" id="iJN-RP-wfC"/>
+                                                        <constraint firstItem="aym-wR-2fI" firstAttribute="height" secondItem="Btd-3u-Xph" secondAttribute="height" multiplier="0.65" id="jY1-f7-HQT"/>
+                                                        <constraint firstItem="aym-wR-2fI" firstAttribute="leading" secondItem="Btd-3u-Xph" secondAttribute="leading" id="mwt-UY-6EE"/>
+                                                        <constraint firstItem="aym-wR-2fI" firstAttribute="top" secondItem="Btd-3u-Xph" secondAttribute="top" id="zSD-t3-4K4"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Btd-3u-Xph" firstAttribute="leading" secondItem="aSN-49-SvE" secondAttribute="leading" constant="10" id="adz-Rf-auO"/>
+                                                <constraint firstItem="Btd-3u-Xph" firstAttribute="top" secondItem="aSN-49-SvE" secondAttribute="top" constant="10" id="g9H-7F-FQN"/>
+                                                <constraint firstAttribute="bottom" secondItem="Btd-3u-Xph" secondAttribute="bottom" constant="10" id="gxv-E3-ByY"/>
+                                                <constraint firstAttribute="trailing" secondItem="Btd-3u-Xph" secondAttribute="trailing" constant="10" id="kvF-DE-Hn1"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="NotePadColor"/>
+                                        <size key="customSize" width="128" height="128"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="jsx-t7-VFd" id="OQE-8l-ZKH"/>
+                                            <outlet property="noteCellLabel" destination="aym-wR-2fI" id="2Mc-dp-tU3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YSD-6d-h8C"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YSD-6d-h8C" firstAttribute="bottom" secondItem="WlL-09-uMw" secondAttribute="bottom" id="GC0-aj-4gz"/>
+                            <constraint firstItem="YSD-6d-h8C" firstAttribute="trailing" secondItem="WlL-09-uMw" secondAttribute="trailing" id="J2k-Mz-Tj9"/>
+                            <constraint firstItem="WlL-09-uMw" firstAttribute="leading" secondItem="YSD-6d-h8C" secondAttribute="leading" id="T5B-Kj-wWl"/>
+                            <constraint firstItem="WlL-09-uMw" firstAttribute="top" secondItem="YSD-6d-h8C" secondAttribute="top" id="dac-PK-8zB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pocket Notes" id="kJK-Ia-VQ1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="1Pa-Ue-YCE">
+                            <color key="tintColor" name="TitleTint"/>
+                            <connections>
+                                <segue destination="5ZB-Ch-xUc" kind="show" identifier="mainToAdd" id="APi-BC-WXy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="notesCollectionView" destination="WlL-09-uMw" id="81e-34-aE4"/>
+                        <segue destination="M6f-XA-6b2" kind="show" identifier="mainToEdit" id="dxq-cx-3KI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMI-Rb-KEe" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839.1304347826087" y="93.75"/>
+        </scene>
+        <!--Add New Note-->
+        <scene sceneID="xKO-XI-Kbz">
+            <objects>
+                <viewController id="5ZB-Ch-xUc" customClass="AddNoteViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IpY-ND-nYP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aib-B8-yFP">
+                                <rect key="frame" x="10" y="88" width="394" height="762"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 October 15:50 | 0 Characters" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xbj-7z-sin">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Svs-Cv-mNk">
+                                        <rect key="frame" x="0.0" y="24" width="394" height="686"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <color key="textColor" name="TitleTint"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="HSl-gY-4rn">
+                                        <rect key="frame" x="0.0" y="718" width="394" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeN-OU-gOK">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="44"/>
+                                                <color key="backgroundColor" name="NotePadColor"/>
+                                                <color key="tintColor" name="TitleTint"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cancelButton:" destination="5ZB-Ch-xUc" eventType="touchUpInside" id="dL9-5v-09a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEu-VZ-4eC">
+                                                <rect key="frame" x="242" y="0.0" width="152" height="44"/>
+                                                <color key="backgroundColor" name="NotePadColor"/>
+                                                <color key="tintColor" name="TitleTint"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="5ZB-Ch-xUc" eventType="touchUpInside" id="Uun-Ls-QSb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V8x-O3-9N3"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aib-B8-yFP" firstAttribute="bottom" secondItem="V8x-O3-9N3" secondAttribute="bottom" multiplier="0.986" id="665-ge-yIj"/>
+                            <constraint firstItem="aib-B8-yFP" firstAttribute="top" secondItem="V8x-O3-9N3" secondAttribute="top" id="R7i-aS-aGs"/>
+                            <constraint firstItem="aib-B8-yFP" firstAttribute="leading" secondItem="V8x-O3-9N3" secondAttribute="leading" constant="10" id="tPK-od-4lB"/>
+                            <constraint firstItem="V8x-O3-9N3" firstAttribute="trailing" secondItem="aib-B8-yFP" secondAttribute="trailing" constant="10" id="w9m-rK-TUC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Note" id="n17-hp-ak1"/>
+                    <connections>
+                        <outlet property="cancelButtonOutlet" destination="aeN-OU-gOK" id="tjx-rE-iKp"/>
+                        <outlet property="dateLabel" destination="Xbj-7z-sin" id="heO-xD-etX"/>
+                        <outlet property="doneButtonOutlet" destination="EEu-VZ-4eC" id="ia5-1Z-cBN"/>
+                        <outlet property="noteTextView" destination="Svs-Cv-mNk" id="tIP-CM-wDC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKj-w9-cgT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2813.04347826087" y="93.75"/>
+        </scene>
+        <!--Update-->
+        <scene sceneID="S3S-p8-xuW">
+            <objects>
+                <viewController id="M6f-XA-6b2" customClass="EditNoteViewController" customModule="MyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b1Q-21-Mcs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-t0-btV">
+                                <rect key="frame" x="10" y="88" width="394" height="762"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 October 15:50 | 0 Characters" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYK-s7-1zB">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pwO-za-C2h">
+                                        <rect key="frame" x="0.0" y="24" width="394" height="686"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <color key="textColor" name="TitleTint"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="xTW-xy-OdD">
+                                        <rect key="frame" x="0.0" y="718" width="394" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKR-Sz-XsK">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="44"/>
+                                                <color key="backgroundColor" name="NotePadColor"/>
+                                                <color key="tintColor" name="TitleTint"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cancelbutton:" destination="M6f-XA-6b2" eventType="touchUpInside" id="SKU-a7-EuY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhX-nu-Wmb">
+                                                <rect key="frame" x="242" y="0.0" width="152" height="44"/>
+                                                <color key="backgroundColor" name="NotePadColor"/>
+                                                <color key="tintColor" name="TitleTint"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="M6f-XA-6b2" eventType="touchUpInside" id="ykS-39-jNJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cN6-QP-pel"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pO0-t0-btV" firstAttribute="leading" secondItem="cN6-QP-pel" secondAttribute="leading" constant="10" id="UhF-1D-hKI"/>
+                            <constraint firstItem="cN6-QP-pel" firstAttribute="trailing" secondItem="pO0-t0-btV" secondAttribute="trailing" constant="10" id="W2X-6r-cYX"/>
+                            <constraint firstItem="pO0-t0-btV" firstAttribute="bottom" secondItem="cN6-QP-pel" secondAttribute="bottom" multiplier="0.986" id="W5J-ZN-6Sb"/>
+                            <constraint firstItem="pO0-t0-btV" firstAttribute="top" secondItem="cN6-QP-pel" secondAttribute="top" id="pNe-us-BuM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Update" id="iC1-pk-cdh">
+                        <barButtonItem key="rightBarButtonItem" image="minus" catalog="system" id="ZSo-tS-1H8">
+                            <color key="tintColor" name="TitleTint"/>
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="M6f-XA-6b2" id="H3m-g7-v3c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButtonOutlet" destination="hKR-Sz-XsK" id="hGh-zc-sMZ"/>
+                        <outlet property="dateLabel" destination="VYK-s7-1zB" id="7Oi-YQ-fnM"/>
+                        <outlet property="doneButtonOutlet" destination="FhX-nu-Wmb" id="hzV-Nx-TT9"/>
+                        <outlet property="noteTextView" destination="pwO-za-C2h" id="dfg-oK-TlQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jma-nZ-ofm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="1002"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7lt-Yj-ozL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5NY-3N-3AW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ciV-R7-1HP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="TitleTint"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lhj-Ls-PtR" kind="relationship" relationship="rootViewController" id="ye6-bM-aiA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLN-ai-Lfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus" catalog="system" width="128" height="24"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.92199999094009399" green="0.82499998807907104" blue="0.75900000333786011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="NotePadColor">
+            <color red="0.87999999523162842" green="0.76599997282028198" blue="0.7279999852180481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TitleTint">
+            <color red="0.13699999451637268" green="0.15700000524520874" blue="0.22100000083446503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
