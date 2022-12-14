@@ -14,6 +14,10 @@
 - Deleting or updating the note after opening it
 
 
+## Screenshots
+<img src="images/NoteList.png" width = "234" height = "506">  <img src="images/NewNote.png" width = "234" height = "506">  
+
+
 ## Setup
 To open this project locally, clone the project and open it in Xcode.
 
