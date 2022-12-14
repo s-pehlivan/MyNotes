@@ -15,7 +15,7 @@
 
 
 ## Screenshots
-img src="images/NewNote.png" width = "234" height = "506">  <img src="images/NotesList.png" width = "234" height = "506">
+<img src="images/NewNote.png" width = "234" height = "506">  <img src="images/NotesList.png" width = "234" height = "506">
 
 
 ## Setup
